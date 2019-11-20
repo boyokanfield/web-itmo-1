@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>JS first</title>
+        <meta charset="UTF-8">
+        <style>
+            p{
+                margin:0px;
+            }
+            h1{
+                margin:0px;
+            }
+        </style>
+    </head>
+    <body bgcolor="#202020" text="#FFFFFF">
+        <a name="top">top label</a>
+        <div>
+            <p class="editor-note"><u><span style="color:red"><sub>My</sub> <sup><strong>cat</strong></sup></span> <mark><em>is</em></mark> <s><b>very</b></s> <small><i>grumpy</i></small></u></p>
+            <input type="button" value="Нажать" data-color="red">
+            <a name="ifmo" id="ifmo" href="http://ifmo.ru">Ссылка</a>
+        </div>
+        <h1>Самый большой заголовок</h1>
+        <h2>Заголовок поменьше</h2>
+        <h3>Заголовок еще поменьше</h3>
+        <h4>Заголовок и еще поменьше</h4>
+        <h5>Заголовок почти самый маленький</h5>
+        <h6>Самый маленький заголовок</h6>
+
+        <div>
+            <p>Почему эта страница так плоха?</p>
+            <img id="shrek" src="img.jpg" alt="Хороший вопрос..."/>
+        </div>
+
+        <div>
+            <h2>Нумерованный список</h2>
+                <ol style="list-style-type:upper-roman">
+                    <li>element 1</li>
+                    <li>element 2</li>
+                    <li>element 3</li>
+                </ol>
+            <h2>Ненумерованный список</h2>   
+                <ul>
+                    <li>element</li>
+                    <li>element</li>
+                    <li>element</li>
+                </ul>
+        </div>
+
+        <form name="sign up" id="sign up id">
+            <fieldset>
+                <legend>
+                    Sign up
+                </legend>
+                Имя <input id="uni" type="text"><br>
+                Пароль <input type="password"><br>
+                <div><input type="checkbox">Сохранить на 2 недели<br></div>
+                <input id="button" name="button" type="button" value="Войти">
+            </fieldset>
+        </form>
+
+        <a id="2top" href="#top">Наверх</a>
+
+        <input type="button"  value="Жми!">
+    </body>
+    <script>
+        document.write("Some text");
+        document.write("<h1><u>Formated text</u></h1>");
+        document.write("<p>Anchors: " + document.anchors.length + "</p>");
+        document.write("<p>In first anchor</p><p>{</p>");
+        document.write("<p style='padding-left:30px;'>" + document.anchors[0].innerHTML + "</p>");
+        document.write("<p>}</p>");
+        document.write("<p>Forms: " + document.forms.length + "</p>");
+        document.write("<p>First form name: " + document.forms[0].name + "</p>");
+        document.write("<p>Images: " + document.images.length + "</p>");
+        document.write("<p>First image id: " + document.images[0].id + "</p>");
+        document.write("<p>Links: " + document.links.length + "</p>");
+        document.write("<p>First link id: " + document.links[0].id + "</p>");
+        document.write("<p>Domain: " + location.hostname + "</p>");
+        document.write("<p>Domain: " + document.domain + "</p>");
+        document.write("<p>URL of parent document: " + document.referrer + "</p>");
+        document.write("<p>Document title: " + document.title + "</p>");
+        document.write("<p>Document URL: " + document.URL + "</p>");
+
+        var button = document.getElementById("button");
+        button.onclick = function() {
+            button.disabled = true;
+        };
+        document.write("<p>Button name: " + button.name + "</p>");
+        document.write("<p>Button type: " + button.type + "</p>");
+        document.write("<p>Button text: " + button.value + "</p>");
+        document.write("<p>Button form name: " + button.parentElement.parentElement.id + "</p>");
+
+        var form = document.getElementById("sign up id");
+        for (var i = 0; i < form.childNodes.length; i++)
+            document.write("<p>Form child #" + i + ": " + form.childNodes[i].innerHTML + "</p>");
+        for (var i = 0; i < form.childNodes.length; i++)
+            document.write("<p>Form child #" + i + " action: " + form.childNodes[i].action + "</p>");
+        for (var i = 0; i < form.childNodes.length; i++)
+            document.write("<p>Form child #" + i + " enctype: " + form.childNodes[i].enctype + "</p>");
+        document.write("<p>Form elements: " + form.childNodes.length + "</p>");
+        document.write("<p>Form send method: " + form.method + "</p>");
+        document.write("<p>Form name: " + form.name + "</p>");
+        form.reset();
+        //form.submit();
+
+        var image = document.getElementById("shrek");
+        image.setAttribute("horizontal-align", "center");
+        document.write("<p>Image alternative: " + image.getAttribute("alt") + "</p>");
+        var imgStyle = "border-width:5px;border-style:solid;border-color:white;";
+        image.setAttribute("style", imgStyle);
+        image.setAttribute("width", "100px");
+        image.setAttribute("height", "100px");
+        document.write("<p>Image name: " + image.name + "</p>");
+        image.setAttribute("src", "img2.jpg");
+    </script>
+</html>
