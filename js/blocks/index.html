@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Variants</title>
+        <meta charset="UTF-8">
+        <style>
+            div{
+                text-align: justify;
+                margin: 0px;
+                border: 1px solid black;
+                font-size: 20px;
+                height: 80px;
+            }
+            #header{
+                text-align: center;
+                background-color: orange;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 2.5rem; 
+                margin: 0;
+                left: 0px;
+                right: 0px;
+                border-left-width: 0px;
+                border-right-width: 0px;
+                height: 90px;
+            }
+            #footer{
+                background-color: red;
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 2.5rem; 
+                margin: 0;
+                left: 0px;
+                right: 0px;
+                border-left-width: 0px;
+                border-right-width: 0px;
+                height: 85px;
+            }
+            .block{
+                background-color: rgb(170, 255, 0);
+                width: 200px;
+                height: 600px;
+                position:absolute;
+            }
+            figure{
+                margin:0px;
+            }
+            p{
+                margin: 1px;
+            }
+            #body{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            #one{
+                top: 110px;
+                left: 20px;
+            }
+            #two{
+                top: 160px;
+                left: 250px;
+            }
+            #three{
+                top: 110px;
+                left: 480px;
+            }
+            #four{
+                top: 150px;
+                left: 710px;
+            }
+            #five{
+                top: 120px;
+                left: 930px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <h1>Четыре лучших игрока в кс в мире</h1>
+        </div>
+        <div id="body">
+            <div class="block" id="one">
+                <figure>
+                    <img src="https://www.hltv.org/img/static/TopSmallLogo2x.png">
+                    <figcaption id="menu">
+                        <span>Лучшие игроки по версии hltv.org:</span>
+                        <p><a href="https://www.hltv.org/stats/players/11893/ZywOo">ZywOo</a></p>
+                        <p><a href="https://www.hltv.org/stats/players/7998/s1mple">s1mple</a></p>
+                        <p><a href="https://www.hltv.org/stats/players/7938/XANTARES">XANTARES</a></p>
+                        <p><a href="https://www.hltv.org/stats/players/8950/Kaze">Kaze</a></p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="block" id="two">
+                <figure>
+                    <img src="https://static.hltv.org//images/playerprofile/bodyshot/compressed/11893.png" alt="ZywOo" width="200px">
+                    <figcaption>
+                        <img src="https://static.hltv.org/images/bigflags/30x20/FR.gif" alt="France">
+                        <p>Rating: 1.36</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="block" id="three">
+                <figure>
+                    <img src="https://static.hltv.org//images/playerprofile/bodyshot/compressed/7998.png" alt="s1mple" width="200px">
+                    <figcaption>
+                        <img src="https://static.hltv.org/images/bigflags/30x20/UA.gif" alt="Ukraine">
+                        <p>Rating: 1.26</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="block" id="four">
+                <figure>
+                <img src="https://static.hltv.org//images/playerprofile/bodyshot/compressed/7938.png" alt="XANTARES" width="200px">
+                <figcaption>
+                    <img src="https://static.hltv.org/images/bigflags/30x20/TR.gif" alt="Turkey">
+                    <p>Rating: 1.20</p>
+                </figcaption>
+                </figure>
+            </div>
+            <div class="block" id="five">
+                <figure>
+                <img src="https://static.hltv.org//images/playerprofile/bodyshot/compressed/8950.png" alt="Kaze" width="200px">
+                <figcaption>
+                    <img src="https://static.hltv.org/images/bigflags/30x20/MY.gif" alt="Malaysia">
+                    <p>Rating: 1.20</p>
+                </figcaption>
+                </figure>
+            </div>
+        </div>
+        <div id="footer">
+            <h2>Успешные киберспортсмены</h2>
+        </div>
+    </body>
+</html>
