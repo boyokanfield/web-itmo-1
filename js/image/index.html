@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>JS image</title>
+        <meta charset="UTF-8">
+        <style>
+            p{
+                margin:0px;
+            }
+            h1{
+                margin:0px;
+            }
+        </style>
+    </head>
+    <body bgcolor="#202020" text="#FFFFFF">
+        <div>
+            <img id="shrek" src="img.jpg" alt="Хороший вопрос..."/>
+        </div>
+    </body>
+    <script>
+        var image = document.getElementById("shrek");
+        image.setAttribute("horizontal-align", "center");
+        document.write("<p>Image alternative: " + image.getAttribute("alt") + "</p>");
+        var imgStyle = "border-width:5px;border-style:solid;border-color:white;";
+        image.setAttribute("style", imgStyle);
+        image.setAttribute("width", "100px");
+        image.setAttribute("height", "100px");
+        document.write("<p>Image name: " + image.name + "</p>");
+        image.setAttribute("src", "img2.jpg");
+    </script>
+</html>

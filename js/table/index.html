@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>JS table</title>
+        <meta charset="UTF-8">
+        <style>
+            p{
+                margin:0px;
+            }
+            h1{
+                margin:0px;
+            }
+        </style>
+    </head>
+    <body bgcolor="#202020" text="#FFFFFF">
+        <table id="table" border="1" cellpadding="50" bgcolor="red" bordercolor="red">
+            <thead>
+              <tr>
+                  <th></th>
+                  <th></th>
+                  <th colspan="2"></th>
+                  <th></th>
+              </tr>
+              </thead>
+            <tbody>
+              <tr>
+                  <td colspan="5"></td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td rowspan="3"></td>
+                  <td></td>
+                  <td rowspan="3"></td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+            </tbody>
+          </table>
+    </body>
+    <script>
+        var table = document.getElementById("table");
+        table.setAttribute("border", "10px");
+        table.setAttribute("cellpadding", "10px");
+        table.setAttribute("cellspacing", "10px");
+        var tableStyle = "border-width:5px;border-style:solid;border-color:white;";
+        table.setAttribute("style", tableStyle);
+        table.innerHTML = "<caption>TABLE</caption>" + table.innerHTML;
+        table.deleteRow(0);
+        var row = table.insertRow(0);
+        var cell = row.insertCell(0);
+        row.setAttribute("align", "center");
+        row.setAttribute("valign", "top");
+        cell.setAttribute("align", "center");
+        cell.setAttribute("valign", "top");
+        cell.innerHTML = "CELL";
+        cell.setAttribute("colspan", "5");
+    </script>
+</html>

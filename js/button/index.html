@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>JS button</title>
+        <meta charset="UTF-8">
+        <style>
+            p{
+                margin:0px;
+            }
+            h1{
+                margin:0px;
+            }
+        </style>
+    </head>
+    <body bgcolor="#202020" text="#FFFFFF">
+        <form name="sign up" id="sign up id">
+            <fieldset>
+                <legend>
+                    Sign up
+                </legend>
+                Имя <input id="uni" type="text"><br>
+                Пароль <input type="password"><br>
+                <div><input type="checkbox">Сохранить на 2 недели<br></div>
+                <input id="button" name="button" type="button" value="Войти">
+            </fieldset>
+        </form>
+    </body>
+    <script>
+        var button = document.getElementById("button");
+        button.onclick = function() {
+            button.disabled = true;
+        };
+        document.write("<p>Button name: " + button.name + "</p>");
+        document.write("<p>Button type: " + button.type + "</p>");
+        document.write("<p>Button text: " + button.value + "</p>");
+        document.write("<p>Button form name: " + button.parentElement.parentElement.id + "</p>");
+    </script>
+</html>
