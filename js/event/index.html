@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>JS event</title>
+        <meta charset="UTF-8">
+        <style>
+            p{
+                margin:0px;
+            }
+            h1{
+                margin:0px;
+            }
+        </style>
+    </head>
+    <body bgcolor="#202020" text="#FFFFFF">
+    </body>
+    <script>
+        var click = function(e)
+        {
+            if (event.which == 1)
+            {
+                document.write("<p>Left mouse button pressed</p>");
+            }
+            else if (event.which == 2)
+            {
+                document.write("<p>Middle mouse button pressed</p>");
+            }
+            else if (event.which == 3)
+            {
+                document.write("<p>Right mouse button pressed</p>");
+            }
+            document.write("<p>Pressed key code: "+event.which+"</p>");
+            document.write("<p>Mouse position: (" +event.pageX+ ";" +event.pageY+ ")</p>");
+            document.write("<p>Mouse position in screen: (" +event.screenX+ ";" +event.screenY+ ")</p>");
+            document.write("<p>Element : "+event.srcElement+"</p>");
+            document.write("<p>Event type : "+event.type+"</p>");
+            document.onmousedown = click;
+        };
+        document.onmousedown = click;
+    </script>
+</html>

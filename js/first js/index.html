@@ -60,6 +60,39 @@
         <a id="2top" href="#top">Наверх</a>
 
         <input type="button"  value="Жми!">
+
+        <table id="table" border="1" cellpadding="50" bgcolor="red" bordercolor="red">
+            <thead>
+              <tr>
+                  <th></th>
+                  <th></th>
+                  <th colspan="2"></th>
+                  <th></th>
+              </tr>
+              </thead>
+            <tbody>
+              <tr>
+                  <td colspan="5"></td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td rowspan="3"></td>
+                  <td></td>
+                  <td rowspan="3"></td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+            </tbody>
+          </table>
     </body>
     <script>
         document.write("Some text");
@@ -79,37 +112,5 @@
         document.write("<p>URL of parent document: " + document.referrer + "</p>");
         document.write("<p>Document title: " + document.title + "</p>");
         document.write("<p>Document URL: " + document.URL + "</p>");
-
-        var button = document.getElementById("button");
-        button.onclick = function() {
-            button.disabled = true;
-        };
-        document.write("<p>Button name: " + button.name + "</p>");
-        document.write("<p>Button type: " + button.type + "</p>");
-        document.write("<p>Button text: " + button.value + "</p>");
-        document.write("<p>Button form name: " + button.parentElement.parentElement.id + "</p>");
-
-        var form = document.getElementById("sign up id");
-        for (var i = 0; i < form.childNodes.length; i++)
-            document.write("<p>Form child #" + i + ": " + form.childNodes[i].innerHTML + "</p>");
-        for (var i = 0; i < form.childNodes.length; i++)
-            document.write("<p>Form child #" + i + " action: " + form.childNodes[i].action + "</p>");
-        for (var i = 0; i < form.childNodes.length; i++)
-            document.write("<p>Form child #" + i + " enctype: " + form.childNodes[i].enctype + "</p>");
-        document.write("<p>Form elements: " + form.childNodes.length + "</p>");
-        document.write("<p>Form send method: " + form.method + "</p>");
-        document.write("<p>Form name: " + form.name + "</p>");
-        form.reset();
-        //form.submit();
-
-        var image = document.getElementById("shrek");
-        image.setAttribute("horizontal-align", "center");
-        document.write("<p>Image alternative: " + image.getAttribute("alt") + "</p>");
-        var imgStyle = "border-width:5px;border-style:solid;border-color:white;";
-        image.setAttribute("style", imgStyle);
-        image.setAttribute("width", "100px");
-        image.setAttribute("height", "100px");
-        document.write("<p>Image name: " + image.name + "</p>");
-        image.setAttribute("src", "img2.jpg");
     </script>
 </html>

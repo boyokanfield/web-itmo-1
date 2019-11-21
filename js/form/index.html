@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>JS form</title>
+        <meta charset="UTF-8">
+        <style>
+            p{
+                margin:0px;
+            }
+            h1{
+                margin:0px;
+            }
+        </style>
+    </head>
+    <body bgcolor="#202020" text="#FFFFFF">
+        <form name="sign up" id="sign up id">
+            <fieldset>
+                <legend>
+                    Sign up
+                </legend>
+                Имя <input id="uni" type="text"><br>
+                Пароль <input type="password"><br>
+                <div><input type="checkbox">Сохранить на 2 недели<br></div>
+                <input id="button" name="button" type="button" value="Войти">
+            </fieldset>
+        </form>
+    </body>
+    <script>
+        var form = document.getElementById("sign up id");
+        for (var i = 0; i < form.childNodes.length; i++)
+            document.write("<p>Form child #" + i + ": " + form.childNodes[i].innerHTML + "</p>");
+        for (var i = 0; i < form.childNodes.length; i++)
+            document.write("<p>Form child #" + i + " action: " + form.childNodes[i].action + "</p>");
+        for (var i = 0; i < form.childNodes.length; i++)
+            document.write("<p>Form child #" + i + " enctype: " + form.childNodes[i].enctype + "</p>");
+        document.write("<p>Form elements: " + form.childNodes.length + "</p>");
+        document.write("<p>Form send method: " + form.method + "</p>");
+        document.write("<p>Form name: " + form.name + "</p>");
+        form.reset();
+        form.submit();
+    </script>
+</html>
