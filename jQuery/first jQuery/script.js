@@ -2,6 +2,15 @@ $(document).ready(function(){
 	$(".vk_link").css("color","orange");
 	$("[href]").prepend("↗");
 	$("[href]").attr("target","_blank");
+    $("[href^='http://']").each(function() {
+		$(this).attr("href", $(this).attr("href").replace("http://", "https://"));
+	});
+    $("button#revert").click(function(){
+		$("[href]").each(function() {
+			$(this).contents().eq(0).remove();
+		});
+		$("[href]").removeAttr("target");
+	});
 
     $("#b1").click(function(){
     $("#str1").fadeIn("slow");
@@ -19,26 +28,30 @@ $(document).ready(function(){
     $("#str5").slideToggle("slow");
     });
 
-	let butt = document.createElement("button");
-	butt.setAttribute("id", "ajax");
-	butt.innerHTML="Refresh";
-	document.getElementsByTagName('body')[0].appendChild(butt);
-	$("button#ajax").click(function(){
-		$("p.number").load("https://inxaoc.github.io/example/ajax-1.html");
+	let refreshButton = document.createElement("button");
+	refreshButton.setAttribute("id", "ajaxLoad");
+	refreshButton.innerHTML="Refresh";
+	document.getElementsByTagName('body')[0].appendChild(refreshButton);
+	$("button#ajaxLoad").click(function(){
+		$("p.loadTo").load("https://inxaoc.github.io/example/ajax-1.html");
     });
 
-    let butt2 = document.createElement("button");
-	butt2.setAttribute("id", "ajax2");
-	butt2.innerHTML="Send";
-	document.getElementsByTagName('body')[0].appendChild(butt2);
+    let sendButton = document.createElement("button");
+	sendButton.setAttribute("id", "ajaxSend");
+	sendButton.innerHTML="Send";
+	document.getElementsByTagName('body')[0].appendChild(sendButton);
 
-	$("button#ajax2").click(function(){
+	$("button#ajaxSend").click(function(){
 		let temp = document.createElement("div");
 		temp.setAttribute("id", "temp");
 		document.getElementsByTagName('body')[0].appendChild(temp);
 		$(temp).load("https://inxaoc.github.io/example/ajax.json",
 			"authorization", onComplete);
     });
+});
+
+$(document).ready(function(){
+	$("form *").prop("disabled", true);
 });
 
 function onComplete(){
@@ -59,7 +72,6 @@ function onComplete(){
 				text += "</li>";
 			}
 		} else text +=json[i];
-
 	}
 	$(temp).append(text)
 }
