@@ -62,7 +62,7 @@ function onComplete(){
 		if (json[i] == '{' || json[i] == '[') {
 			text += "<ul><li>";
 		} else if (json[i] == '}' || json[i] == ']') {
-			text += "</ul></ul>";
+			text += "</li></ul>";
 		} else if (json[i] == ',') {
 			text += "</li><li>";
 		} else if (json[i] == '"') {
